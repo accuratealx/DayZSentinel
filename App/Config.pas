@@ -167,6 +167,7 @@ begin
     SteamDayZModsID := f.ReadInteger(SECTION_GAME, KEY_GAME_MODS_STEAMID, 221100);
 
     //Клиентские моды
+    SetLength(ClientMods, 0);
     F.ReadSection(SECTION_CLIENT_MODS, List);
     for i := 0 to List.Count - 1 do
     begin
@@ -182,6 +183,7 @@ begin
     end;
 
     //Элементы бэкапа
+    SetLength(BackupItems, 0);
     F.ReadSection(SECTION_BACKUP_ITEMS, List);
     for i := 0 to List.Count - 1 do
     begin
@@ -203,6 +205,7 @@ begin
 
 
     //Элементы очистки
+    SetLength(ClearItems, 0);
     F.ReadSection(SECTION_CLEAR_ITEMS, List);
     for i := 0 to List.Count - 1 do
     begin
