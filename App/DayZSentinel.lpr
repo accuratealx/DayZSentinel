@@ -5,7 +5,7 @@ program DayZSentinel;
 
 uses
   SysUtils, process, Classes, FileUtil, LazFileUtils, Zipper, ZStream, DateUtils,
-  Config, Directory, crt;
+  Config, Directory;
 
 var
   Cfg: TConfig;
@@ -422,8 +422,6 @@ begin
   Step_Wellcome;
 
 Start:
-  //Почистить экран
-  crt.ClrScr;
 
   //Чтение конфига
   Step_ReadConfig;
